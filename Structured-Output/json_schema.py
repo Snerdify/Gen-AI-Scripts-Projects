@@ -3,10 +3,7 @@
 # Response Format: devs can supply a JSON SCHEMA via option json_schema in response_format parameter
 # This is useful when a model is not calling a tool but responding to a user in a structured way 
 # This method works with newer models : gpt-4o-2024-08-06 , gpt-4o-mini-2024-07-18
-
 # When a response_format is provided with strict:True , then model output will match the supplied schema 
-
-
 
 
 from openai import OpenAI 
@@ -64,18 +61,11 @@ def get_response_json(query):
                         },
                         "required":["steps","final_answer"],
                         "additional_properties": False,
-
-
                     }
-
                 },
-                
-
-
             },
         },
     )
-
     return response.choices[0].message
 
 
