@@ -39,4 +39,7 @@ class X(BaseModel):
         )
 
     return completion[0].message.parsed
+
+response_pydantic = func(query)
+response_pydantic.model_dump()
 '''
