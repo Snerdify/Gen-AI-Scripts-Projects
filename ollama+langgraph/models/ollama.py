@@ -35,4 +35,5 @@ class OllamaJsonModel:
 
 
 class OllamaModel:
-    def __init__( )
+    def __init__():
+        pass
