@@ -69,8 +69,15 @@ Lot less compute required when using this technique for finetuning
 
 TODO:
 1. IMPLEMENT LORA AND QLORA SEPERATELY TO UNDERSTAND THEIR USE BETTER 
+PEFT-LORA-CHECKPOINTS is the actual collab notebook 
 - About the BLOOM(BigScience Large Open-science Open-access Multilingual Language Model) 
 -BLOOM is an autoregressive Large Language Model (LLM), trained to continue text from a prompt on vast amounts of text data using industrial-scale computational resources. As such, it is able to output coherent text in 46 languages and 13 programming languages that is hardly distinguishable from text written by humans. BLOOM can also be instructed to perform text tasks it hasn't been explicitly trained for, by casting them as text generation tasks.
+-Decoder only 
+- Causal Language Model 
+- Good token max length(good level of context can be fetched)
+- Good Vocab size
+- Trained on fairly large set of languages , including code 
+- Has a permissive license 
 
 - why do we cast low dim params as float32 ? 
 
