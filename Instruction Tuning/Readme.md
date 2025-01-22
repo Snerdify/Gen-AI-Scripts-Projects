@@ -17,9 +17,9 @@ Adapting Large language models to new tasks :
 
 Prompting[Prompt Engineering]:
 1. Few shot or Many shot -> Exploring LLM possibilities 
-# Cheap and quick way to test out 
-# Prompt models - takes hours / minutes 
-# Deploying these models -> Can take days
+## Cheap and quick way to test out 
+Prompt models - takes hours / minutes 
+Deploying these models -> Can take days
 
 LLMS:
 Supervised Finetuning : Trained on Benchmarks -> Instruction finetuning -> Following instructions , New Benchmarks: Bias ; Toxicity
@@ -73,6 +73,7 @@ TODO:
 -BLOOM is an autoregressive Large Language Model (LLM), trained to continue text from a prompt on vast amounts of text data using industrial-scale computational resources. As such, it is able to output coherent text in 46 languages and 13 programming languages that is hardly distinguishable from text written by humans. BLOOM can also be instructed to perform text tasks it hasn't been explicitly trained for, by casting them as text generation tasks.
 
 - why do we cast low dim params as float32 ? 
+
 Summary of freezing weights during LORA : 
 1. Freezing Parameters: Prevents updating original weights during fine-tuning.
 2. Casting Small Parameters to float32: Improves numerical stability for critical layers like LayerNorm.
@@ -80,5 +81,18 @@ Summary of freezing weights during LORA :
 4. Input Gradients: Required for advanced fine-tuning methods (like LoRA or custom adapters).
 5. Casting Outputs to float32: Ensures stable logits for downstream tasks like loss calculation
 
+
+Summary of setting up LORA parameters :
+1. The function provides a detailed view of the model's parameter trainability.
+2. It ensures the fine-tuning setup (like LoRA or other adapter methods) is configured as intended.
+3. This kind of utility is crucial when working with large models to optimize memory and computational efficiency.
+
+Summary of LoraConfig :
+This code initializes and applies a LoRA configuration to a causal language model.
+By using LoRA:
+The majority of the model's parameters remain frozen (not updated during training).
+Only the low-rank matrices (r=16) and their scaled adaptations are trained, making the fine-tuning process lightweight and efficient.
+The configuration includes dropout for better generalization, scaling for controlled adaptation, and a task-specific setting for causal language modeling.
+
 2. Fine-Tune the llama model to create alpaca model 
-3. 
+3. Difference between Casual modelling(decoder , text regressive models ) and seq2seq model
