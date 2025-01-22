@@ -64,4 +64,9 @@ Lot less compute required when using this technique for finetuning
 - uses bitsandbytes for quantization
 - uses huggingface's PEFT techniques 
 - Qlora is an improvement on LORA 
-- 
+
+
+TODO:
+1. IMPLEMENT LORA AND QLORA SEPERATELY TO UNDERSTAND THEIR USE BETTER 
+2. Fine-Tune the llama model to create alpaca model 
+3. 
