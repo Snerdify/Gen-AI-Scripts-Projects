@@ -57,4 +57,11 @@ Model Information: OpenLLama
 3. Trained on Red Pajama Dataset 
 4. Apache 2.0 license - commercially usable 
 
- 
+Fine-Tuning technique
+QloRa : Efficient fine-tuning of quantized models 
+Idea : Downstream tasks have intrinsically low dimensions
+Lot less compute required when using this technique for finetuning 
+- uses bitsandbytes for quantization
+- uses huggingface's PEFT techniques 
+- Qlora is an improvement on LORA 
+- 
