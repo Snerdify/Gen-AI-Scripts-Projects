@@ -66,12 +66,19 @@ Lot less compute required when using this technique for finetuning
 - Qlora is an improvement on LORA 
 
 
+
 TODO:
 1. IMPLEMENT LORA AND QLORA SEPERATELY TO UNDERSTAND THEIR USE BETTER 
 - About the BLOOM(BigScience Large Open-science Open-access Multilingual Language Model) 
 -BLOOM is an autoregressive Large Language Model (LLM), trained to continue text from a prompt on vast amounts of text data using industrial-scale computational resources. As such, it is able to output coherent text in 46 languages and 13 programming languages that is hardly distinguishable from text written by humans. BLOOM can also be instructed to perform text tasks it hasn't been explicitly trained for, by casting them as text generation tasks.
 
 - why do we cast low dim params as float32 ? 
+Summary of freezing weights during LORA : 
+1. Freezing Parameters: Prevents updating original weights during fine-tuning.
+2. Casting Small Parameters to float32: Improves numerical stability for critical layers like LayerNorm.
+3. Gradient Checkpointing: Reduces memory usage by recomputing activations.
+4. Input Gradients: Required for advanced fine-tuning methods (like LoRA or custom adapters).
+5. Casting Outputs to float32: Ensures stable logits for downstream tasks like loss calculation
 
 2. Fine-Tune the llama model to create alpaca model 
 3. 
