@@ -101,5 +101,6 @@ The majority of the model's parameters remain frozen (not updated during trainin
 Only the low-rank matrices (r=16) and their scaled adaptations are trained, making the fine-tuning process lightweight and efficient.
 The configuration includes dropout for better generalization, scaling for controlled adaptation, and a task-specific setting for causal language modeling.
 
-2. Fine-Tune the llama model to create alpaca model 
+2. Fine-Tune the llama model to create alpaca model - Sam Witteven
 3. Difference between Casual modelling(decoder , text regressive models ) and seq2seq model
+4. Implement QLORA - SEntDEx
