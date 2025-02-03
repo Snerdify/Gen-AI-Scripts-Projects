@@ -1,4 +1,5 @@
-/agent_env/
+agent_env
 util.ipynb
 instruct-tuning
 .env
+myenv

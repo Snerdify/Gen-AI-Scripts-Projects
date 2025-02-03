@@ -1,0 +1,6 @@
+langchain
+langchain_core
+python-dotenv
+langserve
+fastapi
+uvicorn
