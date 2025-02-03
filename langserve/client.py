@@ -1,6 +1,6 @@
 import requests
 
-response  = requests.get("http://localhost:8000/tester/output_schema",
+response  = requests.post("http://localhost:8000/tester/invoke",
                          json ={'input':{'topic' :"unit testing"}})
 
-print(response.json())
+print(response.json()['output']['content'])
